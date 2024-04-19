@@ -63,6 +63,7 @@ const ContactPage = () => {
               <p>06 20 30 40 50</p>
               <div>
                 <iframe
+                  title="Carte de localisation de John Doe"
                   width="100%"
                   height="200"
                   frameborder="0"
