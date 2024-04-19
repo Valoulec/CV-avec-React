@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import git from "../img/icons8-github-48.png";
 import lin from "../img/icons8-linkedin-50.png";
 import twit from "../img/icons8-logo-twitter-encadré-50.png";
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   return (
     <div className="footer">
-      <div className="footer1">
+      <div className="footer-column ">
         <div>
           <h4>John Doe</h4>
           <p>40 Rue Laure Diebold</p>
@@ -19,32 +41,62 @@ const Footer = () => {
         <div>
           <h4>Liens utiles</h4>
           <ul>
-            <li>Accueil</li>
-            <li>A propos</li>
-            <li>Services</li>
-            <li>Me contacter</li>
-            <li>Mentions légales</li>
+            <li>
+              {" "}
+              <a href="/">Accueil</a>
+            </li>
+            <li>
+              <a href="/">A propos</a>
+            </li>
+            <li>
+              <a href="/Service">Services</a>
+            </li>
+            <li>
+              <a href="/Contact">Me contacter</a>
+            </li>
+            <li>
+              <a href="/Mantion Legale">Mentions légales</a>
+            </li>
           </ul>
         </div>
         <div>
           <h4>Mes dernières réalisations</h4>
           <ul>
-            <li>Fresh food</li>
-            <li>Restaurant Akira</li>
-            <li>Espace bien-être</li>
+            <li>
+              {" "}
+              <a href="/realisation"> Fresh food </a>
+            </li>
+            <li>
+              <a href="/realisation">Restaurant Akira</a>
+            </li>
+            <li>
+              <a href="/realisation">Espace bien-être</a>
+            </li>
           </ul>
         </div>
         <div>
           <h4>Mes derniers articles</h4>
           <ul>
-            <li>Coder son site en HTML/CSS</li>
-            <li>Vendre ses produits sur le web</li>
-            <li>Se positionner sur Google</li>
+            <li>
+              {" "}
+              <a href="/Blog">Coder son site en HTML/CSS</a>
+            </li>
+            <li>
+              {" "}
+              <a href="/Blog">Vendre ses produits sur le web</a>
+            </li>
+            <li>
+              {" "}
+              <a href="/Blog">Se positionner sur Google</a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="copy">
-        <p>© Designed by John Doe</p>
+        <p className="copyr">© Designed by John Doe</p>
+        <div className="scroll-to-top">
+          {isVisible && <div onClick={scrollToTop}>revenir en haut</div>}
+        </div>
       </div>
     </div>
   );

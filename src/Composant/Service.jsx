@@ -19,7 +19,7 @@ function Services() {
       <picture className="imag">
         <source media="(min-width: 768px)" srcSet={banner} />
         <source media="(min-width: 576px)" srcSet={banner1} />
-        <img src={banner2} alt="" className="img-fluid" />
+        <img src={banner2} alt="" className="imag" />
       </picture>
       <div className="ser">
         <h1>MON OFFRE DE SERVICES</h1>

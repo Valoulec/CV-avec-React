@@ -152,14 +152,12 @@
   width: 50%; /* Remplacez #votre-couleur par le code de couleur que vous voulez */
 }
 
-.footer {
-  margin-top: 20px;
-}
 .footer-column {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: #e6e6e6;
+  padding-top: 10px;
 }
 
 /* Style pour le copyright */
@@ -167,30 +165,12 @@
   text-align: center;
   flex: 0 0 100%;
   background-color: #333;
+  padding: 20px;
 }
 .copyr {
   padding: 0;
   margin: 0;
   color: white;
-}
-#myBtn {
-  display: none; /* Caché par défaut */
-  position: fixed; /* Position fixe/sticky */
-  bottom: 20px; /* Place le bouton en bas de la page */
-  right: 30px; /* Place le bouton à 30px de la droite */
-  z-index: 99; /* Assure qu'il ne se superpose pas */
-  border: none; /* Supprime les bordures */
-  outline: none; /* Supprime le contour */
-  background-color: #0d6efd; /* Définit une couleur de fond */
-  color: white; /* Couleur du texte */
-  cursor: pointer; /* Ajoute un pointeur de souris au survol */
-  padding: 15px; /* Un peu de padding */
-  border-radius: 10px; /* Coins arrondis */
-  font-size: 18px; /* Augmente la taille de la police */
-}
-
-#myBtn:hover {
-  background-color: #555; /* Ajoute un fond gris foncé au survol */
 }
 
 .fond {
@@ -274,6 +254,9 @@ h1 {
 .ima {
   display: block;
   margin: 0 auto;
+}
+.cards {
+  margin-bottom: 10px;
 }
 
 .card {
@@ -388,4 +371,75 @@ h1 {
   .contact-row {
     flex-direction: column;
   }
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400; /* Poids de 400 pour le corps du texte */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600; /* Poids de 600 pour les titres et les balises <strong> */
+}
+
+.accor {
+  margin-bottom: 20px;
+}
+
+.imag {
+  width: 100%;
+}
+
+.back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #555; /* Dark background */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+.back-to-top:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.scroll-to-top {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+}
+
+.scroll-to-top div {
+  /* Hidden by default */
+  background-color: #555; /* Dark background */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  border-radius: 50%; /* Circular button */
+  padding: 10px; /* Some padding */
+  margin: 10px; /* Some margin */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+.scroll-to-top div:hover {
+  background-color: #298eff; /* Darken the background color on hover */
+}
+
+/* Show the button when it is visible */
+.scroll-to-top div.show {
+  display: block;
 }

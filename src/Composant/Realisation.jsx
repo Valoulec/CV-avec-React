@@ -15,7 +15,7 @@ function BasicExample() {
     <div className="row">
       <Header />
       <img src={Banner} alt="" />
-      <h1>Portfolio</h1>
+      <h1>PORTFOLIO</h1>
       <p className="mess">Voici quelques-une de mes réalisations.</p>
       <hr className="hr1" />
       <div className="row">

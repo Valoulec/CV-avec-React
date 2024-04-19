@@ -57,7 +57,7 @@ function CardExample({ title, image, description }) {
     <div className="container">
       <div className="row ">
         {cardsData.map((card, index) => (
-          <div className="col-lg-4 col-md-6 col-sm-12 " key={index}>
+          <div className="col-lg-4 col-md-6 col-sm-12 cards " key={index}>
             <Card style={{ width: "100%" }} className="card ">
               <Card.Img
                 variant="top"
