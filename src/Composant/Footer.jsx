@@ -34,9 +34,17 @@ const Footer = () => {
           <p>40 Rue Laure Diebold</p>
           <p>69009 Lyon, France</p>
           <p>Téléphone : 06 20 30 40 50</p>
-          <img src={git} alt="GitHub" />
-          <img src={twit} alt="Twiter" />
-          <img src={lin} alt="Linkedin" />
+
+          <a href="https://github.com/github-john-doe">
+            {" "}
+            <img src={git} alt="GitHub" />
+          </a>
+          <a href="https://twitter.com/?lang=fr">
+            <img src={twit} alt="Twiter" />
+          </a>
+          <a href="https://fr.linkedin.com">
+            <img src={lin} alt="Linkedin" />
+          </a>
         </div>
         <div>
           <h4>Liens utiles</h4>
