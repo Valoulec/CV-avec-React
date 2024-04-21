@@ -15,7 +15,7 @@ function Acueil() {
         <div className="presentation">
           <h1>Bonjour, je suis John Doe</h1>
           <p>Développeur web full stack</p>
-          <Button variant="primary" href="#À propos">
+          <Button variant="primary" href="#a-propos">
             En savoir plus
           </Button>
         </div>
@@ -23,7 +23,9 @@ function Acueil() {
       <div className="Container">
         <div className="propos Row">
           <div className="Col">
-            <h2 className="pro">À propos</h2>
+            <h2 id="a-propos" className="pro">
+              À propos
+            </h2>
             <hr />
             <p>
               Passionné par l'informatique et les nouvelles technologies, j'ai
